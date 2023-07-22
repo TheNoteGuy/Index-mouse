@@ -25,15 +25,6 @@ namespace UnityEngine.XR.OpenXR.Samples.ControllerSample
 
         private const int MOUSEEVENTF_WHEEL = 0x0800;
 
-
-        uint scrollSpeed(float yValue)
-        {
-            uint value = Convert.ToUInt32(yValue);
-            Debug.Log(value);
-            return value;
-        }
-
-
         private void UpdateHandle(InputAction.CallbackContext ctx)
         {
             if (ctx.ReadValue<Vector2>().y >= 0.1) 
